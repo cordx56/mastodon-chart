@@ -328,3 +328,6 @@ data:
   {{- with .Values.mastodon.metrics.statsd.address }}
   STATSD_ADDR: {{ . }}
   {{- end }}
+  {{- if .Values.mastodon.trustedProxyIp }}
+  TRUSTED_PROXY_IP: {{ .Values.mastodon.trustedProxyIp }}
+  {{- end }}
